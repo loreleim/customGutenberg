@@ -1,6 +1,6 @@
 var el = wp.element.createElement;
 wp.blocks.registerBlockType('shaiful-gutenberg/notice-block', {
- title: 'Testing',  // Block name visible to user
+ title: 'Optimized',  // Block name visible to user
  icon: 'smiley', // Toolbar icon can be either using WP Dashicons or custom SVG
  category: 'common', // Under which category the block would appear
  attributes: {   // The data this block will be storing

@@ -14,6 +14,8 @@ function admin() {
    wp_enqueue_style('template', plugins_url( '/blocks/template/index.css', __FILE__ )); //this shows the style in the editor
 
    //Optimized
+   wp_enqueue_script('optimized', plugins_url('/blocks/optimized/index.js', __FILE__), array( 'wp-blocks', 'wp-element' ));
+   wp_enqueue_style('optimized', plugins_url( '/blocks/optimized/index.css', __FILE__ )); //this shows the style in the editor
 }
 add_action( 'enqueue_block_editor_assets', 'admin' );
 
@@ -22,9 +24,10 @@ add_action( 'enqueue_block_editor_assets', 'admin' );
 function frontend() {
    
    //Template
-   wp_enqueue_style('template', plugins_url( 'blocks/template/index.css', __FILE__ ));
+   wp_enqueue_style('optimized', plugins_url( 'blocks/optimized/index.css', __FILE__ ));
 
    //Optimized
+   wp_enqueue_style('optimized', plugins_url( 'blocks/optimized/index.css', __FILE__ ));
 }
 add_action( 'wp_enqueue_scripts', 'frontend' );
 ?>
