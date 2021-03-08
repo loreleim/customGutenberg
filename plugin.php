@@ -24,7 +24,7 @@ add_action( 'enqueue_block_editor_assets', 'admin' );
 function frontend() {
    
    //Template
-   wp_enqueue_style('optimized', plugins_url( 'blocks/optimized/index.css', __FILE__ ));
+   wp_enqueue_style('template', plugins_url( 'blocks/template/index.css', __FILE__ ));
 
    //Optimized
    wp_enqueue_style('optimized', plugins_url( 'blocks/optimized/index.css', __FILE__ ));
