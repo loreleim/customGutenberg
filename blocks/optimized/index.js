@@ -1,5 +1,5 @@
 var el = wp.element.createElement;
-wp.blocks.registerBlockType('shaiful-gutenberg/notice-block', {
+wp.blocks.registerBlockType('loreleim', {
  title: 'Optimized',  // Block name visible to user
  icon: 'smiley', // Toolbar icon can be either using WP Dashicons or custom SVG
  category: 'common', // Under which category the block would appear
