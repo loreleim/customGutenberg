@@ -9,16 +9,22 @@
 // Loads things when the admin editor is active
 function admin() {
 
-   //Testing
+   //Template
    wp_enqueue_script('template', plugins_url('/blocks/template/index.js', __FILE__), array( 'wp-blocks', 'wp-element' ));
    wp_enqueue_style('template', plugins_url( '/blocks/template/index.css', __FILE__ )); //this shows the style in the editor
+
+   //Optimized
 }
 add_action( 'enqueue_block_editor_assets', 'admin' );
 
 
 //without this function, the styles won't load on the frontend
 function frontend() {
-   wp_enqueue_style('template', plugins_url( '/template/index.css', __FILE__ ));
+   
+   //Template
+   wp_enqueue_style('template', plugins_url( 'blocks/template/index.css', __FILE__ ));
+
+   //Optimized
 }
 add_action( 'wp_enqueue_scripts', 'frontend' );
 ?>
