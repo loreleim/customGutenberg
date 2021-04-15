@@ -6,29 +6,29 @@
 * Version: 1.0
 */
 
-// Loads things when the admin editor is active
-function admin() {
+function bokoblocks() {
 
-   //Template
-   wp_enqueue_script('template', plugins_url('/blocks/template/index.js', __FILE__), array( 'wp-blocks', 'wp-element' ));
-   wp_enqueue_style('template', plugins_url( '/blocks/template/index.css', __FILE__ )); //this shows the style in the editor
+   //Register Style
+   wp_register_style(
+      'template-style',
+        plugins_url( 'blocks/template/index.css', __FILE__ ),
+        array( 'wp-edit-blocks')
+    );
 
-   //Optimized
-   wp_enqueue_script('optimized', plugins_url('/blocks/optimized/index.js', __FILE__), array( 'wp-blocks', 'wp-element' ));
-   wp_enqueue_style('optimized', plugins_url( '/blocks/optimized/index.css', __FILE__ )); //this shows the style in the editor
+   // Register Build.js
+   wp_register_script(
+     'template-script',
+       plugins_url( 'blocks/template/index.js', __FILE__ ),
+       array( 'wp-blocks', 'wp-element')
+   );
+
+   // Register Block 1
+   register_block_type( 'blocks/template', array(
+      'style' => 'template-style',
+      'editor_style' => 'template-style',
+      'editor_script' => 'template-script',
+   ) );
 }
-add_action( 'enqueue_block_editor_assets', 'admin' );
+add_action( 'init', 'bokoblocks' );
 
-
-//without this function, the styles won't load on the frontend
-function frontend() {
-   
-   //Template
-   wp_enqueue_style('template', plugins_url( 'blocks/template/index.css', __FILE__ ));
-
-   //Optimized
-   wp_enqueue_style('optimized', plugins_url( 'blocks/optimized/index.css', __FILE__ ));
-}
-add_action( 'wp_enqueue_scripts', 'frontend' );
 ?>
-
