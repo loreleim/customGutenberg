@@ -10,16 +10,12 @@ function bokoblocks() {
 
    //Register Style
    wp_register_style(
-      'template-style',
-        plugins_url( 'blocks/template/index.css', __FILE__ ),
-        array( 'wp-edit-blocks')
+      'template-style', plugins_url( 'blocks/template/index.css', __FILE__ ), array( 'wp-edit-blocks')
     );
 
    // Register Build.js
    wp_register_script(
-     'template-script',
-       plugins_url( 'blocks/template/index.js', __FILE__ ),
-       array( 'wp-blocks', 'wp-element')
+     'template-script', plugins_url( 'blocks/template/index.js', __FILE__ ), array( 'wp-blocks', 'wp-element')
    );
 
    // Register Block 1
