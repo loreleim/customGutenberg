@@ -1,3 +1,5 @@
+//doing an import here breaks the code
+
 var el = wp.element.createElement;
 wp.blocks.registerBlockType('loreleim/template', {
  title: 'Testing',  // Block name visible to user
@@ -8,7 +10,7 @@ wp.blocks.registerBlockType('loreleim/template', {
   title: { type: 'string' },   // Notice box title in h4 tag
   content: { type: 'array', source: 'children', selector: 'p' }  /// Notice box content in p tag
  },
- edit: ({attributes, setAttributes}) => {
+ edit({attributes, setAttributes}){
   // How our block renders in the editor in edit mode
  
   function updateTitle( event ) {
@@ -54,8 +56,8 @@ wp.blocks.registerBlockType('loreleim/template', {
         }
      )   
   ); // End return
-}, // End edit()
-save: ({attributes}) => {
+ }, // End edit()
+ save({attributes}) {
   // How our block renders on the frontend
  
   return el( 'div', 
@@ -77,5 +79,5 @@ save: ({attributes}) => {
   
   ); // End return
     
-} // End save()
+ } // End save()
 });
