@@ -8,38 +8,38 @@ wp.blocks.registerBlockType('loreleim/template', {
   title: { type: 'string' },   // Notice box title in h4 tag
   content: { type: 'array', source: 'children', selector: 'p' }  /// Notice box content in p tag
  },
- edit: (props) => {
+ edit: ({attributes, setAttributes}) => {
   // How our block renders in the editor in edit mode
  
   function updateTitle( event ) {
-     props.setAttributes( { title: event.target.value } );
+     setAttributes( { title: event.target.value } );
   }
   function updateContent( newdata ) {
-     props.setAttributes( { content: newdata } );
+     setAttributes( { content: newdata } );
   }
   function updateType( event ) {
-     props.setAttributes( { type: event.target.value } );
+     setAttributes( { type: event.target.value } );
   }
   return el( 'div', 
      { 
-        className: 'notice-box notice-' + props.attributes.type
+        className: 'notice-box notice-' + attributes.type
      }, 
      el(
         'select', 
         {
            onChange: updateType,
-           value: props.attributes.type,
+           value: attributes.type,
         },
         el("option", {value: "default" }, "Default"),
         el("option", {value: "success" }, "Success"),
-        el("option", {value: "danger" }, "Danger")
+        el("option", {value: "danger" }, "Danger Zone")
      ),
      el(
         'input', 
         {
            type: 'text', 
            placeholder: 'Enter title here...',
-           value: props.attributes.title,
+           value: attributes.title,
            onChange: updateTitle,
            style: { width: '100%' }
         }
@@ -49,29 +49,29 @@ wp.blocks.registerBlockType('loreleim/template', {
         {
            tagName: 'p',
            onChange: updateContent,
-           value: props.attributes.content,
+           value: attributes.content,
            placeholder: 'Enter description here...'
         }
      )   
   ); // End return
 }, // End edit()
-save: (props) => {
+save: ({attributes}) => {
   // How our block renders on the frontend
  
   return el( 'div', 
      { 
-        className: 'notice-box notice-' + props.attributes.type
+        className: 'notice-box notice-' + attributes.type
      }, 
      el(
         'h4', 
         null,
-        props.attributes.title
+        attributes.title
      ),
      el( 
         wp.editor.RichText.Content, 
         {
            tagName: 'p',
-           value: props.attributes.content
+           value: attributes.content
         }
      )
   
