@@ -2,7 +2,8 @@
 # customGutenberg
 WP Blocks built with a dash of React
  
-## Wordpress docs are outdated, lengthy and old
+## Returning Blocks
+How Wordpress teaches you vs. How React Devs do it
 
 <details>
   <summary>How the docs teach you to write React blocks</summary>
