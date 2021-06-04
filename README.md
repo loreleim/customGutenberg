@@ -86,6 +86,8 @@ import { select, dispatch } from '@wordpress/data';
 
 [A source that got me started on cleaner, nicer gutenberg](https://wordpress.stackexchange.com/questions/346562/file-structure-and-react-setup-when-creating-multiple-gutenberg-blocks)
 
+[Understanding the difference between doing wp.create.element and <Fragments/>](https://www.youtube.com/watch?v=jauZCeLrGFA&ab_channel=ZacGordonZacGordon)
+
 [GoDaddy really did the most for us with their coblocks plugin](https://github.com/godaddy-wordpress/coblocks)
 
 [How to Register More than One Block](https://stackoverflow.com/questions/56045886/registering-multiple-custom-gutenberg-blocks-in-a-plugin-with-webpack-build)
