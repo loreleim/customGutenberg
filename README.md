@@ -117,4 +117,6 @@ import { select, dispatch } from '@wordpress/data';
 
 [GoDaddy really did the most for us with their coblocks plugin](https://github.com/godaddy-wordpress/coblocks)
 
+[Install process](https://www.youtube.com/watch?v=8Jh707tR-0c&ab_channel=ZacGordonZacGordon)
+
 [How to Register More than One Block](https://stackoverflow.com/questions/56045886/registering-multiple-custom-gutenberg-blocks-in-a-plugin-with-webpack-build)
