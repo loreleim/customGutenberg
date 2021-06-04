@@ -135,9 +135,17 @@ It requires node 10.0.0 + and npm 6.9.0 +
 ## Development done? Time to build
 `npm run build`
 
+## Problems, Bugs, Solutions
+
+<details>
+  <summary>Cannot destructure property `writeFile` of 'undefined' or 'null'. gutenpride</summary>
+  Check your node version. WP-Scripts and Guten can only run on node 10.0.0 +. you can check this with `node -v`
+</details>
+
+
 ## Bibliography
 
-[Wordpress Block Office Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
+[Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
 
 [Here's a solid one that explains the save()](https://www.youtube.com/watch?v=sYHYTk0jeE8)
 
