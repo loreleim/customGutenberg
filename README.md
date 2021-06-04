@@ -49,6 +49,7 @@ That's 35 lines 🤮 of array formatted. Development handoff hell.
 
 <details>
   <summary>How you should be writing your gutenberg blocks</summary>
+ ```html
    return (
       <div className={`notice-box notice` + attributes.type}>
          <div>
@@ -63,6 +64,7 @@ That's 35 lines 🤮 of array formatted. Development handoff hell.
          onChange={updateTitle}></input>
          <RichText tagName={"p"} onChange={updateContent} value={attributes.content} placeholder={"Enter description here..."}></RichText>
       </div>);
+  ```html
 </details>
 
 15 lines of gorgeous, readable code!
