@@ -137,6 +137,8 @@ It requires node 10.0.0 + and npm 6.9.0 +
 
 ## Bibliography
 
+[Wordpress Block Office Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
+
 [Here's a solid one that explains the save()](https://www.youtube.com/watch?v=sYHYTk0jeE8)
 
 [A source that got me started on cleaner, nicer gutenberg](https://wordpress.stackexchange.com/questions/346562/file-structure-and-react-setup-when-creating-multiple-gutenberg-blocks)
