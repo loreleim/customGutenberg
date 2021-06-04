@@ -6,7 +6,7 @@ WP Blocks built with a dash of React
 How Wordpress teaches you vs. How React Devs do it
 
 <details>
-  <summary>How the docs teach you to write React blocks</summary>
+  <summary>Wordpress Version 🤮 (35 lines)</summary>
   
   ```
    return el( 'div', 
@@ -46,10 +46,9 @@ How Wordpress teaches you vs. How React Devs do it
   ```
 </details>
 
-That's 35 lines 🤮 of array formatted. Development handoff hell.
 
 <details>
-  <summary>How you should be writing your gutenberg blocks</summary>
+  <summary>React Dev version (15 lines)</summary>
   
  ```
    return (
