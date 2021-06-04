@@ -107,6 +107,28 @@ import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
 import { createBlock, getBlockType } from '@wordpress/blocks';
 import { select, dispatch } from '@wordpress/data';
 ```
+
+## File Setup
+    .
+    ├── ...
+    ├── plugin.php
+    ├── .gitignore              # ignore node_modules  
+    ├── package.json            # don't create this file, it will be created during npm install  
+    ├── src                     # Test files (alternatively `spec` or `tests`)
+    │   ├── benchmarks          # Load and stress tests
+    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
+    │   └── unit                # Unit tests
+    └── ...
+
+## npm install
+`npm install @wordpress/scripts --save-dev`
+
+## watch your files
+`npm start`
+
+## Development done? Time to build
+`npm run build`
+
 ## Bibliography
 
 [Here's a solid one that explains the save()](https://www.youtube.com/watch?v=sYHYTk0jeE8)
