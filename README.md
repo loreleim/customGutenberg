@@ -49,22 +49,20 @@ That's 35 lines 🤮 of array formatted. Development handoff hell.
 
 <details>
   <summary>How you should be writing your gutenberg blocks</summary>
- ```
    return (
-      <div className={"notice-box notice" + attributes.type}>
+      <div className={`notice-box notice` + attributes.type}>
          <div>
             <select onChange={updateType} value={attributes.type}></select>
-            <option value={"default"}>Default</option>
-            <option value={"success"}>Success</option>
-            <option value={"danger"}>Danger</option>
+            <option value={`default`}>Default</option>
+            <option value={`success`}>Success</option>
+            <option value={`danger`}>Danger</option>
          </div>
          <input type="text" 
          placeholder="Enter title here..." 
          value={attributes.title}
          onChange={updateTitle}></input>
          <RichText tagName={"p"} onChange={updateContent} value={attributes.content} placeholder={"Enter description here..."}></RichText>
-      </div>
-   );
+      </div>);
 </details>
 
 15 lines of gorgeous, readable code!
