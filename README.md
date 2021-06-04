@@ -74,8 +74,10 @@ That's 35 lines 🤮 of array formatted. Development handoff hell.
 
 ## Your Key imports
 ```
-import { Component } from '@wordpress/element';
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { Component, Fragment } from '@wordpress/element';
+import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
+import { createBlock, getBlockType } from '@wordpress/blocks';
+import { select, dispatch } from '@wordpress/data';
 ```
 ## Bibliography
 
