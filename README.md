@@ -123,6 +123,9 @@ import { select, dispatch } from '@wordpress/data';
 ## npm install
 `npm install @wordpress/scripts --save-dev`
 
+This will create dependencies in package.json.
+It requires node 10.0.0 + and npm 6.9.0 + 
+
 ## watch your files
 `npm start`
 
