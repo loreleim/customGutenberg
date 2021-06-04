@@ -72,6 +72,33 @@ How Wordpress teaches you vs. How React Devs do it
 
 15 lines of gorgeous, readable code!
 
+## Creating Elements
+How Wordpress teaches you vs. How React Devs do it
+
+
+<details>
+  <summary>Wordpress</summary>
+  
+```
+var el = wp.element.createElement;
+```
+  
+</details>
+
+
+<details>
+  <summary>React Dev</summary>
+  
+```
+import { Component, Fragment } from '@wordpress/element';
+
+class ButtonsEdit extends Component {
+}
+export default ButtonsEdit;
+```
+  
+</details>
+
 ## Your Key imports
 ```
 import { registerBlockType } from '@wordpress/blocks';
