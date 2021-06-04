@@ -6,7 +6,7 @@ WP Blocks built with a dash of React
 How Wordpress teaches you vs. How React Devs do it
 
 <details>
-  <summary>Wordpress Version 🤮 (35 lines)</summary>
+  <summary>Youtube Tutorial Version 🤮 (35 lines)</summary>
   
   ```
    return el( 'div', 
@@ -77,7 +77,7 @@ How Wordpress teaches you vs. How React Devs do it
 
 
 <details>
-  <summary>Wordpress</summary>
+  <summary>Youtube Tutorials</summary>
   
 ```
 var el = wp.element.createElement;
