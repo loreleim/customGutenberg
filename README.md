@@ -105,6 +105,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { Component, Fragment } from '@wordpress/element';
 import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
 import { createBlock, getBlockType } from '@wordpress/blocks';
+import { InspectorControls } from '@wordpress/blocks'; //appears in the sidebar when a block is being edited
 import { select, dispatch } from '@wordpress/data';
 ```
 
