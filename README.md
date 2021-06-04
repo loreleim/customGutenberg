@@ -75,6 +75,6 @@ That's 35 lines 🤮 of array formatted. Development handoff hell.
 ## Bibliography
 
 [Here's a solid one that explains the save()](https://www.youtube.com/watch?v=sYHYTk0jeE8)
-
+[A source that got me started on cleaner, nicer gutenberg](https://wordpress.stackexchange.com/questions/346562/file-structure-and-react-setup-when-creating-multiple-gutenberg-blocks)
 
 [How to Register More than One Block](https://stackoverflow.com/questions/56045886/registering-multiple-custom-gutenberg-blocks-in-a-plugin-with-webpack-build)
