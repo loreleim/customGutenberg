@@ -71,7 +71,6 @@ That's 35 lines 🤮 of array formatted. Development handoff hell.
 </details>
 
 15 lines of gorgeous, readable code!
-```
 
 ## Your Key imports
 ```
