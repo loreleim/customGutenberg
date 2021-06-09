@@ -111,6 +111,14 @@ import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
 import { select, dispatch } from '@wordpress/data';
 ```
 
+## Where to start?
+
+For now starting from gutenpride is going to be your best bet.
+```
+npx @wordpress/create-block gutenpride
+cd gutenpride
+```
+
 ## File Setup
     .
     ├── ...
@@ -194,6 +202,8 @@ wp.data.select( 'core/block-editor' ).getSelectedBlock().attributes;
 ## Bibliography
 
 [Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
+
+[Starting from Gutenpride](https://developer.wordpress.org/block-editor/handbook/tutorials/create-block/wp-plugin/)
 
 [Here's a solid one that explains the save()](https://www.youtube.com/watch?v=sYHYTk0jeE8)
 
