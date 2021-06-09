@@ -142,6 +142,18 @@ It requires node 10.0.0 + and npm 6.9.0 +
   Check your node version. WP-Scripts and Guten can only run on node 10.0.0 +. you can check this with `node -v`
 </details>
 
+## Debugging
+To debug, open up a console in your wp post / page admin. You can run this script in Google Dev tools or Firefox.
+
+If you want to count how many blocks on a page:
+```
+wp.data.select( 'core/block-editor' ).getBlockCount();
+```
+
+If you want to "console.log()" attributes being passed around, run this command
+```
+wp.data.select( 'core/block-editor' ).getSelectedBlock().attributes;
+```
 
 ## Bibliography
 
