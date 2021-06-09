@@ -123,6 +123,42 @@ import { select, dispatch } from '@wordpress/data';
     │   └── unit                # Unit tests
     └── ...
 
+## Ways to structure your components
+
+<details>
+  <summary>React Component</summary>
+  
+```
+import { Component } from '@wordpress/element';
+
+export default class ButtonsEdit extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Button Test</h1>
+      </div>
+    )
+  }
+}
+```
+  
+</details>
+
+
+<details>
+  <summary>Functional Component w/Props</summary>
+  
+```
+export default function edit ({ attributes, setAttributes }) {
+  return (
+    <div>
+    </div>
+  )
+}
+```
+  
+</details>
+
 ## npm install
 `npm install @wordpress/scripts --save-dev`
 
