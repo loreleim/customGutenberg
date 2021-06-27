@@ -214,16 +214,43 @@ The files you'd want to copy are
     .
     ├── ...
     ├── src
-    │   ├── new folder          # "new folder" should be the name of your bloc
+    │   ├── yourblockfolder         # "yourblockfolder" should be the name of your bloc
     │   │   block.json          # this is where block metadata is stored
     │   │   edit.js             # WP admin display
     │   │   editor.scss         # Styling that only shows up in WP Admin
     │   │   index.js            # name, category, metadata, settings
     │   │   save.js             # Frontend Display
     │   └──   style.scss        # Frontend Styles
+    │   ├── index.js            # don't do anything here, this is just for reference for the second step
     └── ...
  ```
+Add these lines in the src's index.js
+```
+import { registerBlockType } from '@wordpress/blocks';     //this should already be here
 
+import * as yourblockfolder from "./inspector";            //add this
+
+const pullMetadata = ( block ) => {
+
+	let { category } = block;
+
+	const { name, settings } = block;
+
+	registerBlockType( name, {
+		category,
+		...settings,
+	} );
+};
+
+export const registerBlocks = () => {
+	[
+    //if you had a second block it would go here
+    yourblockfolder                                       //add this
+	].forEach( pullMetadata );
+};
+
+registerBlocks();
+```
 
 ## Bibliography
 
