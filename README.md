@@ -199,6 +199,30 @@ If you want to "console.log()" attributes being passed around, run this command
 wp.data.select( 'core/block-editor' ).getSelectedBlock().attributes;
 ```
 
+
+## Development: Making Edits
+Anytime you want to create a new block or make edits. 
+
+open up the directory and run a 
+```
+npm start
+```
+
+## Developement: New Blocks
+The files you'd want to copy are
+    .
+    ├── ...
+    ├── src
+    │   ├── new folder          # "new folder" should be the name of your bloc
+    │   │   block.json          # this is where block metadata is stored
+    │   │   edit.js             # WP admin display
+    │   │   editor.scss         # Styling that only shows up in WP Admin
+    │   │   index.js            # name, category, metadata, settings
+    │   │   save.js             # Frontend Display
+    │   └──   style.scss        # Frontend Styles
+    └── ...
+
+
 ## Bibliography
 
 [Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
