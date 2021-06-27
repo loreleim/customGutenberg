@@ -210,6 +210,7 @@ npm start
 
 ## Developement: New Blocks
 The files you'd want to copy are
+```
     .
     ├── ...
     ├── src
@@ -221,6 +222,7 @@ The files you'd want to copy are
     │   │   save.js             # Frontend Display
     │   └──   style.scss        # Frontend Styles
     └── ...
+ ```
 
 
 ## Bibliography
