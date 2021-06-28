@@ -282,6 +282,9 @@ export default function edit({ attributes, setAttributes }) {
 }
 ```
 
+Types of Controls you can add in Inspector Controls
+1. [Form Toggle](https://developer.wordpress.org/block-editor/reference-guides/components/form-toggle/#design-guidelines)
+
 ## Bibliography
 
 [Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
