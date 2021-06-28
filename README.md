@@ -256,6 +256,8 @@ registerBlocks();
 
 [Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
 
+[Customize the Gutenberg Sidebar Settings](https://wpblockz.com/tutorial/how-to-code-the-inspector-controls/)
+
 [Starting from Gutenpride](https://developer.wordpress.org/block-editor/handbook/tutorials/create-block/wp-plugin/)
 
 [Here's a solid one that explains the save()](https://www.youtube.com/watch?v=sYHYTk0jeE8)
