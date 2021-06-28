@@ -305,3 +305,5 @@ Types of Controls you can add in Inspector Controls
 [Install process](https://www.youtube.com/watch?v=8Jh707tR-0c&ab_channel=ZacGordonZacGordon)
 
 [How to Register More than One Block](https://stackoverflow.com/questions/56045886/registering-multiple-custom-gutenberg-blocks-in-a-plugin-with-webpack-build)
+
+[GSAP in Blocks](https://www.youtube.com/watch?v=bMrI3nManuc)
