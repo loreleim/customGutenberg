@@ -252,6 +252,36 @@ export const registerBlocks = () => {
 registerBlocks();
 ```
 
+## Development: Block Sidebar
+```
+import './editor.scss';
+import { InspectorControls } from "@wordpress/block-editor";
+import { Fragment } from '@wordpress/element';
+import { PanelBody, FormToggle} from "@wordpress/components";
+
+export default function edit({ attributes, setAttributes }) {
+
+  const {show} = attributes;
+  console.log(show);
+
+	return (
+		<Fragment>
+      <h1>Inspector</h1>
+      <InspectorControls>
+				<PanelBody title="Settings">
+					<FormToggle
+						label="Should text be shown?"
+						help={show ? "Yes" : "No"}
+						checked={show}
+						onChange={() => setAttributes({ show: !show })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+		</Fragment>
+	);
+}
+```
+
 ## Bibliography
 
 [Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
