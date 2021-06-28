@@ -283,7 +283,8 @@ export default function edit({ attributes, setAttributes }) {
 ```
 
 Types of Controls you can add in Inspector Controls
-1. [Form Toggle](https://developer.wordpress.org/block-editor/reference-guides/components/form-toggle/#design-guidelines)
+1. [Form Toggle](https://developer.wordpress.org/block-editor/reference-guides/components/form-toggle/#design-guidelines) (similar to Toggle Control. i would actually use Toggle Control > Form Toggle because you can add labels)
+1. [Toggle Control](https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/)
 
 ## Bibliography
 
