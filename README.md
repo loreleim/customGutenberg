@@ -104,7 +104,7 @@ export default ButtonsEdit;
 import { registerBlockType } from '@wordpress/blocks';
 import { createBlock } from '@wordpress/blocks';
 import { getBlockType } from '@wordpress/blocks';
-import { InspectorControls } from '@wordpress/blocks'; //appears in the sidebar when a block is being edited
+import { InspectorControls } from "@wordpress/block-editor"; //appears in the sidebar when a block is being edited
 import { Component } from '@wordpress/element';
 import { Fragment } from '@wordpress/element';
 import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
