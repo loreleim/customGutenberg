@@ -73,7 +73,7 @@ How Wordpress teaches you vs. How React Devs do it
 15 lines of gorgeous, readable code!
 
 ## Creating Elements
-How Wordpress teaches you vs. How React Devs do it
+How YouTube Tutorials Teach You vs. How React Devs do it
 
 
 <details>
@@ -113,11 +113,31 @@ import { select, dispatch } from '@wordpress/data';
 
 ## Where to start?
 
-For now starting from gutenpride is going to be your best bet.
+For now starting from gutenpride is going to be your best bet. cd into your plugins directory and run
 ```
 npx @wordpress/create-block gutenpride
-cd gutenpride
 ```
+
+If you run into an error on the `npx ... gutenpride` step. You probably have the wrong version of node. [Here's a guide on updating it.](https://nodejs.org/en/download/package-manager/)
+
+If you get the question 
+```
+Need to install the following packages:
+@wordpress/create-block
+```
+hit y, or whatever yes is in your terminal haha.
+
+## Make sure the plugin is working. 
+The generated plugin should now be listed on the Plugins admin page in your WordPress install. Switch WorPress to the plugins page and activate. Create a new page and add the gutenberg block to it.
+
+## Now before you start developing / making edits run
+`npm start`
+
+## Now everytime you make an edit (aka a new block), run:
+`npm run build`
+
+## But one block isn't enough. 
+Agreed. The following steps will show you how to setup your plugin for multiple blocks.
 
 ## File Setup
     .
