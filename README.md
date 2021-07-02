@@ -139,17 +139,46 @@ The generated plugin should now be listed on the Plugins admin page in your Word
 ## But one block isn't enough. 
 Agreed. The following steps will show you how to setup your plugin for multiple blocks.
 
-## File Setup
-    .
-    ├── ...
-    ├── plugin.php
-    ├── .gitignore              # ignore node_modules  
-    ├── package.json            # don't create this file, it will be created during npm install  
-    ├── src                     # Test files (alternatively `spec` or `tests`)
-    │   ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
-    └── ...
+## Copy the starter block file.
+Put this in your src folder
+
+## Delete everything in src except for index.js
+This includes deleting: edit.js, save.js, editor.scss, style.scss
+
+## Replace the content of index.js with
+```
+import { registerBlockType } from '@wordpress/blocks';
+
+import * as announcement from "./announcement";
+import * as button from "./button";
+import * as inspector from "./inspector";
+import * as inspectorsave from "./inspectorsave";
+import * as singlecard from "./singlecard";
+
+const pullMetadata = ( block ) => {
+
+	let { category } = block;
+
+	const { name, settings } = block;
+
+	registerBlockType( name, {
+		category,
+		...settings,
+	} );
+};
+
+export const registerBlocks = () => {
+	[
+    announcement,
+    button,
+    inspector, 
+    inspectorsave, 
+    singlecard
+	].forEach( pullMetadata );
+};
+
+registerBlocks();
+```
 
 ## Ways to structure your components
 
@@ -198,8 +227,6 @@ It requires node 10.0.0 + and npm 6.9.0 +
 
 ## Development done? Time to build
 `npm run build`
-
-## Problems, Bugs, Solutions
 
 <details>
   <summary>Cannot destructure property `writeFile` of 'undefined' or 'null'. gutenpride</summary>
