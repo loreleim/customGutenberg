@@ -180,6 +180,9 @@ export const registerBlocks = () => {
 registerBlocks();
 ```
 
+## Delete the following files
+.editorconfig
+
 ## Ways to structure your components
 
 <details>
