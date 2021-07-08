@@ -362,6 +362,19 @@ Types of Controls you can add in Inspector Controls
 1. [Form Toggle](https://developer.wordpress.org/block-editor/reference-guides/components/form-toggle/#design-guidelines) (similar to Toggle Control. i would actually use Toggle Control > Form Toggle because you can add labels)
 1. [Toggle Control](https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/)
 
+## Config a Block Preview
+```
+const settings = {
+  title: "Repeater",
+  description: "a repeater",
+  icon: "admin-settings",
+  attributes,
+  example: {}, //add this line here
+  edit,
+  save,
+}
+```
+
 ## Bibliography
 
 [Wordpress Block Official Docs, Starting Point](https://developer.wordpress.org/block-editor/how-to-guides/)
