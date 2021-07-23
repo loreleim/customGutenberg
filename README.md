@@ -66,7 +66,7 @@ How Wordpress teaches you vs. How React Devs do it
          <RichText tagName={"p"} onChange={updateContent} value={attributes.content} placeholder={"Enter description here..."}></RichText>
     </div>
     );
-  ```
+```
   
 </details>
 
@@ -139,13 +139,9 @@ The generated plugin should now be listed on the Plugins admin page in your Word
 ## But one block isn't enough. 
 Agreed. The following steps will show you how to setup your plugin for multiple blocks.
 
-## Copy the starter block file.
-Put this in your src folder
-
-## Delete everything in src except for index.js
-This includes deleting: edit.js, save.js, editor.scss, style.scss
-
-## Replace the content of index.js with
+- [ ] Copy the starter block file
+- [ ] Delete everything in src except for index.js (this includes deleting: edit.js, save.js, editor.scss, style.scss)
+- [ ] Replace the content of index.js with
 ```
 import { registerBlockType } from '@wordpress/blocks';
 
@@ -180,10 +176,10 @@ export const registerBlocks = () => {
 registerBlocks();
 ```
 
-## Delete the following files
+- [ ] Delete the following files
 .editorconfig
 
-## replace gutenpride.php with
+- [ ] replace gutenpride.php with
 ```
 <?php
 /**
