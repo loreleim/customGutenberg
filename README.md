@@ -396,3 +396,5 @@ const settings = {
 [How to Register More than One Block](https://stackoverflow.com/questions/56045886/registering-multiple-custom-gutenberg-blocks-in-a-plugin-with-webpack-build)
 
 [GSAP in Blocks](https://www.youtube.com/watch?v=bMrI3nManuc)
+
+[How to use Flex in Innerblocks](https://wordpress.stackexchange.com/questions/390696/innerblocks-breaks-flexbox-and-css-grid-styles)
