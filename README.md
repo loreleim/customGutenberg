@@ -230,8 +230,26 @@ export default function save() {
 	);
 }
 ```
-10. Now remove the style.scss from the main src folder
-11. Run an npm install below
+10. Add a block.json into the gutenbergcontrols / main directory of your folder with the following content: 
+```
+{
+	"apiVersion": 2,
+	"name": "create-block/gutenbergcontrols",
+	"title": "Gutenpride",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "gutenpride",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
+```
+11. Now remove the style.scss from the main src folder
+12. Run an npm install below
 
 ## npm install
 `npm install @wordpress/scripts --save-dev`
