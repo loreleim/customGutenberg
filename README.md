@@ -118,17 +118,10 @@ For now starting from gutenpride is going to be your best bet. cd into your plug
 npx @wordpress/create-block gutenpride
 ```
 
-If you run into an error on the `npx ... gutenpride` step. You probably have the wrong version of node. [Here's a guide on updating it.](https://nodejs.org/en/download/package-manager/)
-
-If you get the question 
-```
-Need to install the following packages:
-@wordpress/create-block
-```
-hit y, or whatever yes is in your terminal haha.
+Hit (y) in the terminal to install @wordpress/create-block. If you run into an error on the `npx ... gutenpride` step. You probably have the wrong version of node. [Here's a guide on updating it.](https://nodejs.org/en/download/package-manager/) Give it 5-10 minutes (it'll install a bunch of npm dependencies) to install and create the folder. I've noticed it depends on your internet speed.
 
 ## Make sure the plugin is working. 
-The generated plugin should now be listed on the Plugins admin page in your WordPress install. Switch WorPress to the plugins page and activate. Create a new page and add the gutenberg block to it.
+The generated plugin should now be listed on the Plugins admin page in your WordPress install. Switch to the Wordpress admin dash. Go to the plugins page and activate. Create a new page and add the gutenberg block to it.
 
 ## Now before you start developing / making edits run
 `npm start`
