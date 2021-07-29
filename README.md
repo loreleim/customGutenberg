@@ -188,13 +188,47 @@ add_action( 'init', 'initializeBlocks' );
 7. In the scr > default > edit.js
 ```
 import './editor.scss';
+import { InspectorControls, RichText } from "@wordpress/block-editor";
+import { Fragment } from '@wordpress/element';
+import { PanelBody, TextControl, ButtonGroup, Button } from "@wordpress/components";
 
-export default function edit() {
-	return (
-		<div>
-      <h1>Hello</h1>
-		</div>
-	);
+export default function edit ({ attributes, setAttributes }) {
+
+  function updateHeaderAttribute(passedValue) {
+    setAttributes({header: passedValue})
+  }
+
+  return (
+    <Fragment>
+
+        <div className="cardContainer">
+          <RichText value={attributes.header} placeholder={"Add Title"} tagName="h1" onChange={updateHeaderAttribute}/>
+        </div>
+
+      <InspectorControls>
+
+        {/*Text Control*/}
+        <PanelBody title="Text" initialOpen={true}>
+          <TextControl 
+          label="Header" 
+          value={attributes.header}
+          onChange={updateHeaderAttribute} />
+				</PanelBody>
+
+        {/*ButtonGroup*/}
+        <PanelBody title="Button Group" initialOpen={true}>
+          <ButtonGroup>
+            <Button variant="primary">25%</Button>
+            <Button variant="primary">50%</Button>
+            <Button variant="primary">75%</Button>
+            <Button variant="primary">100%</Button>
+          </ButtonGroup>
+				</PanelBody>
+
+			</InspectorControls>
+
+    </Fragment>
+  )
 }
 ```
 7. editor.scss is okay, just delete the notations if you'd like
