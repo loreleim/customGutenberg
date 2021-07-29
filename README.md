@@ -99,18 +99,6 @@ export default ButtonsEdit;
   
 </details>
 
-## Your Key imports
-```
-import { registerBlockType } from '@wordpress/blocks';
-import { createBlock } from '@wordpress/blocks';
-import { getBlockType } from '@wordpress/blocks';
-import { InspectorControls } from "@wordpress/block-editor"; //appears in the sidebar when a block is being edited
-import { Component } from '@wordpress/element';
-import { Fragment } from '@wordpress/element';
-import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
-import { select, dispatch } from '@wordpress/data';
-```
-
 ## Where to start?
 
 For now starting from gutenpride is going to be your best bet. cd into your plugins directory and run
@@ -262,6 +250,19 @@ wp.data.select( 'core/block-editor' ).getBlockCount();
 If you want to "console.log()" attributes being passed around, run this command
 ```
 wp.data.select( 'core/block-editor' ).getSelectedBlock().attributes;
+```
+
+
+## Your Key imports
+```
+import { registerBlockType } from '@wordpress/blocks';
+import { createBlock } from '@wordpress/blocks';
+import { getBlockType } from '@wordpress/blocks';
+import { InspectorControls } from "@wordpress/block-editor"; //appears in the sidebar when a block is being edited
+import { Component } from '@wordpress/element';
+import { Fragment } from '@wordpress/element';
+import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
+import { select, dispatch } from '@wordpress/data';
 ```
 
 
