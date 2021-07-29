@@ -231,6 +231,13 @@ export default function save() {
 }
 ```
 10. Now remove the style.scss from the main src folder
+11. Run an npm install below
+
+## npm install
+`npm install @wordpress/scripts --save-dev`
+
+This will create dependencies in package.json.
+It requires node 10.0.0 + and npm 6.9.0 + 
 
 ## Once that's done, make sure to rebuild!
 You can achieve this with `npm run build`
@@ -270,12 +277,6 @@ export default function edit ({ attributes, setAttributes }) {
 ```
   
 </details>
-
-## npm install
-`npm install @wordpress/scripts --save-dev`
-
-This will create dependencies in package.json.
-It requires node 10.0.0 + and npm 6.9.0 + 
 
 ## watch your files
 `npm start`
