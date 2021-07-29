@@ -124,7 +124,7 @@ The generated plugin should now be listed on the Plugins admin page in your Word
 ## Now its time to restructure
 This restructuring makes gutenpride more component friendly. It also allows us to create multiple blocks in the same plugin!
 1. create a folder in src > call it "default"
-2. Move block.json, edit.js, editor.scss, index.js, and save.js into the new "default" folder
+2. Move block.json, edit.js, editor.scss, index.js, save.js, and style.scss into the new "default" folder
 3. in the src folder > create a file > name it "index.js"
 4. Copy the content below, and paste it into index.js
 
