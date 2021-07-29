@@ -193,6 +193,53 @@ add_action( 'init', 'initializeBlocks' );
 }
 ```
 
+7. In the scr > default > edit.js
+```
+import './editor.scss';
+
+export default function edit() {
+	return (
+		<div>
+      <h1>Hello</h1>
+		</div>
+	);
+}
+```
+7. editor.scss is okay, just delete the notations if you'd like
+8. index.js replace everything with
+```
+import './style.scss';
+import metadata from "./block.json";
+import edit from './edit';
+import save from './save';
+
+const {name, category, attributes} = metadata;
+
+const settings = {
+  title: "Default Block",
+  description: "a block that shows an annoucement",
+  icon: "smiley",
+  attributes,
+  edit,
+	save,
+}
+
+export {name, category, metadata, settings};
+```
+9. Replace save.js with the following:
+```
+import { useBlockProps } from '@wordpress/block-editor';
+
+export default function save() {
+	return (
+		<p { ...useBlockProps.save() }>
+			{( 'Gutenpride – hello from the saved content!', 'gutenpride' ) }
+		</p>
+	);
+}
+```
+10. Now remove the style.scss from the main src folder
+
 
 ## Ways to structure your components
 
