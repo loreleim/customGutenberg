@@ -121,18 +121,13 @@ Once you edit the namespaces, the changes should appear immediately in the plugi
 ## Make sure the plugin is working. 
 The generated plugin should now be listed on the Plugins admin page in your WordPress install. Switch to the Wordpress admin dash. Go to the plugins page and activate. Go back to the WP Pages menu, create a new page and add the gutenberg block to it. The default block is named gutenberg with a smiley face icon.
 
-## Now before you start developing / making edits run
-`npm start`
+## Now its time to restructure
+This restructuring makes gutenpride more component friendly. It also allows us to create multiple blocks in the same plugin!
+1. create a folder in src > call it "default"
+2. Move block.json, edit.js, editor.scss, index.js, and save.js into the new "default" folder
+3. in the src folder > create a file > name it "index.js"
+4. Copy the content below, and paste it into index.js
 
-## Now everytime you make an edit (aka a new block), run:
-`npm run build`
-
-## But one block isn't enough. 
-Agreed. The following steps will show you how to setup your plugin for multiple blocks.
-
-- [ ] Copy the starter block file
-- [ ] Delete everything in src except for index.js (this includes deleting: edit.js, save.js, editor.scss, style.scss)
-- [ ] Replace the content of index.js with
 ```
 import { registerBlockType } from '@wordpress/blocks';
 
@@ -167,34 +162,37 @@ export const registerBlocks = () => {
 registerBlocks();
 ```
 
-- [ ] Delete the following files
-.editorconfig
-
-- [ ] replace gutenpride.php with
+5. In plugin.php or gutenpride.php or "namespace".php. Replace lines 16-19 with the following: 
 ```
 <?php
-/**
- * Plugin Name:       Gutenpride
- * Description:       Example block written with ESNext standard and JSX support – build step required.
- * Requires at least: 5.7
- * Requires PHP:      7.0
- * Version:           0.1.0
- * Author:            The WordPress Contributors
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       gutenpride
- *
- * @package           create-block
- */
-
-
 function initializeBlocks() {
 	register_block_type_from_metadata( __DIR__ );
 }
 add_action( 'init', 'initializeBlocks' );
 ```
 
-### Yeah everything should work now
+6. In the scr > default > block.json. Replace all the content with the following
+```
+{
+	"apiVersion": 2,
+	"name": "gutenbergcontrols/default",
+	"title": "Gutenpride",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Gutenberg Default Block",
+  "attributes": {
+    "items": {
+      "type": "number",
+      "default": "default"
+    }
+  },
+	"textdomain": "gutenbergcontrols",
+	"editorScript": "./build/index.js",
+	"editorStyle": "./build/index.css",
+	"style": "./build/style-index.css"
+}
+```
+
 
 ## Ways to structure your components
 
