@@ -131,11 +131,7 @@ This restructuring makes gutenpride more component friendly. It also allows us t
 ```
 import { registerBlockType } from '@wordpress/blocks';
 
-import * as announcement from "./announcement";
-import * as button from "./button";
-import * as inspector from "./inspector";
-import * as inspectorsave from "./inspectorsave";
-import * as singlecard from "./singlecard";
+import * as defaultBlock from "./default";
 
 const pullMetadata = ( block ) => {
 
@@ -151,11 +147,7 @@ const pullMetadata = ( block ) => {
 
 export const registerBlocks = () => {
 	[
-    announcement,
-    button,
-    inspector, 
-    inspectorsave, 
-    singlecard
+    defaultBlock
 	].forEach( pullMetadata );
 };
 
@@ -240,6 +232,8 @@ export default function save() {
 ```
 10. Now remove the style.scss from the main src folder
 
+## Once that's done, make sure to rebuild!
+You can achieve this with `npm run build`
 
 ## Ways to structure your components
 
