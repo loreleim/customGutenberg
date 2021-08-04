@@ -281,7 +281,7 @@ export default function save() {
 	"style": "file:./build/style-index.css"
 }
 ```
-11. Run an npm install below
+11. Run `npm run build`
 
 ## npm install
 `npm install @wordpress/scripts --save-dev`
