@@ -246,20 +246,18 @@ const settings = {
   icon: "smiley",
   attributes,
   edit,
-	save,
+  save,
 }
 
 export {name, category, metadata, settings};
 ```
 9. Replace save.js with the following:
 ```
-import { useBlockProps } from '@wordpress/block-editor';
-
-export default function save() {
+export default function save({ attributes }) {
 	return (
-		<p { ...useBlockProps.save() }>
-			{( 'Gutenpride – hello from the saved content!', 'gutenpride' ) }
-		</p>
+		<Fragment>
+			<h1>{attributes.header}</h1>
+		</Fragment>
 	);
 }
 ```
