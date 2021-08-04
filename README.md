@@ -253,11 +253,13 @@ export {name, category, metadata, settings};
 ```
 9. Replace save.js with the following:
 ```
-export default function save({ attributes }) {
-	return (
-		<Fragment>
-			<h1>{attributes.header}</h1>
-		</Fragment>
+import { Fragment } from '@wordpress/element';
+
+export default function save( { attributes } ) {
+return (
+    <Fragment>
+      <h1>{attributes.header}</h1>
+    </Fragment>
 	);
 }
 ```
