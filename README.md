@@ -281,8 +281,7 @@ export default function save() {
 	"style": "file:./build/style-index.css"
 }
 ```
-11. Now remove the style.scss from the main src folder
-12. Run an npm install below
+11. Run an npm install below
 
 ## npm install
 `npm install @wordpress/scripts --save-dev`
