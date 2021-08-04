@@ -167,17 +167,17 @@ add_action( 'init', 'initializeBlocks' );
 {
 	"apiVersion": 2,
 	"name": "gutenbergcontrols/default",
-	"title": "Gutenpride",
+	"title": "Default Block",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Gutenberg Default Block",
-  "attributes": {
-    "items": {
-      "type": "number",
-      "default": "default"
-    }
-  },
-	"textdomain": "gutenbergcontrols",
+	"attributes": {
+		"items": {
+			"type": "number",
+			"default": "default"
+		}
+	},
+	"textdomain": "pluginname",
 	"editorScript": "./build/index.js",
 	"editorStyle": "./build/index.css",
 	"style": "./build/style-index.css"
