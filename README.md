@@ -156,7 +156,6 @@ registerBlocks();
 
 5. In plugin.php or gutenpride.php or "namespace".php. Replace lines 16-19 with the following: 
 ```
-<?php
 function initializeBlocks() {
 	register_block_type_from_metadata( __DIR__ );
 }
