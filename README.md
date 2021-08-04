@@ -283,15 +283,6 @@ export default function save() {
 ```
 11. Run `npm run build`
 
-## npm install
-`npm install @wordpress/scripts --save-dev`
-
-This will create dependencies in package.json.
-It requires node 10.0.0 + and npm 6.9.0 + 
-
-## Once that's done, make sure to rebuild!
-You can achieve this with `npm run build`
-
 ## Ways to structure your components
 
 <details>
@@ -488,3 +479,16 @@ const settings = {
 [GSAP in Blocks](https://www.youtube.com/watch?v=bMrI3nManuc)
 
 [How to use Flex in Innerblocks](https://wordpress.stackexchange.com/questions/390696/innerblocks-breaks-flexbox-and-css-grid-styles)
+
+<hr>
+# Stuff to Delete
+
+
+## npm install
+`npm install @wordpress/scripts --save-dev`
+
+This will create dependencies in package.json.
+It requires node 10.0.0 + and npm 6.9.0 + 
+
+## Once that's done, make sure to rebuild!
+You can achieve this with `npm run build`
