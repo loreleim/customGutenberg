@@ -172,9 +172,9 @@ add_action( 'init', 'initializeBlocks' );
 	"icon": "smiley",
 	"description": "Gutenberg Default Block",
 	"attributes": {
-		"items": {
-			"type": "number",
-			"default": "default"
+		"header": {
+			"type": "string",
+			"default": "Enter text here..."
 		}
 	},
 	"textdomain": "pluginname",
