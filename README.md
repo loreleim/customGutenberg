@@ -108,6 +108,8 @@ npx @wordpress/create-block gutenpride
 
 Hit (y) in the terminal to install @wordpress/create-block. If you run into an error on the `npx ... gutenpride` step. You probably have the wrong version of node. [Here's a guide on updating it.](https://nodejs.org/en/download/package-manager/) Give it 5-10 minutes (it'll install a bunch of npm dependencies) to install and create the folder. I've noticed it depends on your internet speed.
 
+If you catch any errors on this step, check the [running error log](#errors) below. 
+
 ## Name your plugin!
 
 The following files are places you would want to change gutenpride -> to your plugin name or namespace.
@@ -455,6 +457,12 @@ const settings = {
   save,
 }
 ```
+
+## Errors
+```Cannot destructure property `writeFile` of 'undefined' or 'null'.```
+[Fix](https://stackoverflow.com/questions/62599504/getting-error-while-create-a-block-with-wordpress-create-block-package)
+
+My fix was to make sure I have node v12 + running. You can check this with `node -v`. If you have an existing version of node, but have to use that old version for current projects. I'd reccomend utilizing Node Version Manager, `nvm`
 
 ## Bibliography
 
