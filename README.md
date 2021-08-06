@@ -284,6 +284,7 @@ return (
 }
 ```
 11. Run `npm run build`
+Catching errors on the npm run build step? Take a look at my [errors](#errors) log below. Might have a fix for you there :)
 
 ## Ways to structure your components
 
@@ -461,6 +462,14 @@ const settings = {
 ## Errors
 ```Cannot destructure property `writeFile` of 'undefined' or 'null'.```
 [Fix](https://stackoverflow.com/questions/62599504/getting-error-while-create-a-block-with-wordpress-create-block-package)
+Make sure you're running node v10+
+
+```
+npm run build error
+```
+1. npm update
+2. npm i
+3. npm run build
 
 My fix was to make sure I have node v12 + running. You can check this with `node -v`. If you have an existing version of node, but have to use that old version for current projects. I'd reccomend utilizing Node Version Manager, `nvm`
 
