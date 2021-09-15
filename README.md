@@ -459,6 +459,36 @@ const settings = {
 }
 ```
 
+## Pulling data from the WP API
+[Official Docs](https://developer.wordpress.org/rest-api/reference/posts/)
+```
+import { store as coreStore } from '@wordpress/core-data';
+function simplePosts() {
+    
+    const posts = useSelect( ( select ) => {
+      return select(coreStore).getEntityRecords('postType', 'post');
+    });
+    
+    if ( ! posts ) {
+      return <h1>No Posts</h1>;
+    }
+ 
+    return (
+      <div className="cardContainer">
+        { posts.map( ( post ) => {
+          console.log(post)
+            return <div key={ post.id } className="individualCard">
+              <div className="individualDescription">
+                <h2>{ post.title.rendered }</h2>
+                <p>{ post.excerpt.raw }</p>
+              </div>
+            </div>
+ } ) }
+      </div>
+    );
+  }
+```
+
 ## Errors
 ```Cannot destructure property `writeFile` of 'undefined' or 'null'.```
 [Fix](https://stackoverflow.com/questions/62599504/getting-error-while-create-a-block-with-wordpress-create-block-package)
