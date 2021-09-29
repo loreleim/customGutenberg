@@ -164,11 +164,12 @@ function initializeBlocks() {
 add_action( 'init', 'initializeBlocks' );
 ```
 
-6. In the scr > default > block.json. Replace all the content with the following
+6. In the scr > default > block.json. Replace all the content with the following. 
+'Namespace' in line 3 should be replaced with the name of your plugin. More specifically the name after the create-block/ in the main block.json's line 3. 
 ```
 {
 	"apiVersion": 2,
-	"name": "gutenbergcontrols/default",
+	"name": "namespace/default",
 	"title": "Default Block",
 	"category": "widgets",
 	"icon": "smiley",
