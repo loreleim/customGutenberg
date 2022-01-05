@@ -460,6 +460,23 @@ const settings = {
 }
 ```
 
+## useSelect
+```
+const postType = useSelect(
+      ( select ) => select( 'core/editor' ).getCurrentPostType(), []
+);
+```
+
+```
+    const image = useSelect(
+      ( select ) =>
+        mediaId && isSelected
+          ? select( coreStore ).getMedia( mediaId )
+          : null,
+      [ isSelected, mediaId ]
+    );
+```
+
 ## Pulling data from the WP API
 [Official Docs](https://developer.wordpress.org/rest-api/reference/posts/)
 ```
