@@ -50,7 +50,7 @@ How Wordpress teaches you vs. How React Devs do it
 <details>
   <summary>React Dev version (15 lines)</summary>
   
- ```
+```
    return (
       <div className={`notice-box notice` + attributes.type}>
          <div>
@@ -506,6 +506,38 @@ function simplePosts() {
     );
   }
 ```
+
+## Controls
+<details>
+  <summary>Select Media Popup</summary>
+  
+```
+import { Button } from '@wordpress/components';
+import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+
+const ALLOWED_MEDIA_TYPES = [ 'audio' ];
+
+function MyMediaUploader() {
+	return (
+		<MediaUploadCheck>
+			<MediaUpload
+				onSelect={ ( media ) =>
+					console.log( 'selected ' + media.length )
+				}
+				allowedTypes={ ALLOWED_MEDIA_TYPES }
+				value={ mediaId }
+				render={ ( { open } ) => (
+					<Button onClick={ open }>Open Media Library</Button>
+				) }
+			/>
+		</MediaUploadCheck>
+	);
+}
+```
+
+Deets [here](https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/media-upload/README.md)
+  
+</details>
 
 ## Errors
 ```Cannot destructure property `writeFile` of 'undefined' or 'null'.```
